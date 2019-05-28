@@ -7,4 +7,5 @@ eureka:
     fetch-registry: false
     service-url:
     # 设置Eureka Server的地址,查询服务和注册服务都需要依赖这个地址.默认是http://localhost:8761/eureka/;多个地址可使用','风格.
+#      这里我们设置为http://localhost:8761，只要IP和端口
       defaultZone: http://localhost:8761
