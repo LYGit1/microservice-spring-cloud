@@ -1,0 +1,23 @@
+server:
+  port: 7902
+
+spring:
+  application:
+    name: microservice-springcloud-user
+  jpa:
+    generate-ddl: false
+    show-sql: true
+#    format_sql: true
+    hibernate:
+      ddl-auto: none
+    datasource:
+      platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+logging:
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+    com.tommy: debug
