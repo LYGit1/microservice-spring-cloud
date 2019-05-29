@@ -10,3 +10,6 @@ eureka:
 spring:
   application:
     name: microservice-springcloud-movie
+logging:
+  level:
+    com.tommy.cloud.microservicespringcloudmovie.feign.UserFeignClient: debug  #只响应debug级别
