@@ -1,0 +1,15 @@
+server:
+  port: 7904
+spring:
+  application:
+    name: microservice-springcloud-movie-hystrix
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer2:8761/eureka,http://peer1:8762/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+logging:
+  level:
+    com.tommy.cloud.microservicespringcloudmovie.feign.UserFeignClient: debug  #只响应debug级别
