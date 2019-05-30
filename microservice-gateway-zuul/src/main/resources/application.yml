@@ -12,6 +12,8 @@ eureka:
 zuul:
   routes:
     microservice-springcloud-user: /user/**
-    microservice-springcloud-movie-hystrix: /movie/**
     microservice-springcloud-movie-hystrix1: /movie1/**
+    movie: #标识
+      path: /movie/**
+      serviceId: microservice-springcloud-movie-hystrix
   ignored-services: microservice-springcloud-movie #多个用逗号分隔
