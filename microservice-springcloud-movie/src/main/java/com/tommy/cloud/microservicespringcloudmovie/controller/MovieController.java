@@ -21,6 +21,11 @@ public class MovieController {
         return restTemplate.getForObject("http://localhost:7902/sample/"+id,User.class);
     }
 
+    @GetMapping("/ribbon/{id}")
+    public User findUserByIdClientName(@PathVariable Long id){
+        return restTemplate.getForObject("http://microservice-springcloud-user/sample/"+id,User.class);
+    }
+
     /**
      * @description feign方式通过eureka调用microservice-springcloud-user
      * @param id

@@ -44,10 +44,10 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-dependencies</artifactId>
-            <version>Greenwich.RELEASE</version>
-            <type>pom</type>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <version>2.1.1.RELEASE</version>
         </dependency>
+
     </dependencies>
 
     <build>
