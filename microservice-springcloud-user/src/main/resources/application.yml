@@ -4,18 +4,3 @@ server:
 spring:
   application:
     name: microservice-springcloud-user
-  jpa:
-    generate-ddl: false
-    show-sql: true
-    hibernate:
-      ddl-auto: none
-    datasource:
-      platform: h2
-    schema: classpath:schema.sql
-    data: classpath:data.sql
-  #配置中心
-  cloud:
-    config:
-      uri: http://localhost:${config.port:8888}
-      name: cloud-config
-      profile: ${config.profile:dev}
