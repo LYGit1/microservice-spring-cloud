@@ -1,7 +1,13 @@
-#配置中心
 spring:
+  application:
+    name: microservice-springcloud-user
+#配置中心
   cloud:
     config:
       uri: http://localhost:${config.port:8888}
       name: cloud-config
       profile: ${config.profile:dev}
+      #在注册中心用服务名访问配置服务器
+      discovery:
+        enabled: true
+        service-id: cloud-config-server

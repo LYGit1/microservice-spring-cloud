@@ -1,6 +1,2 @@
 server:
   port: 7902
-
-spring:
-  application:
-    name: microservice-springcloud-user
