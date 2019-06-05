@@ -6,14 +6,14 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://peer2:8761/eureka,http://peer1:8762/eureka
+      defaultZone: http://peer2:8761/eureka
   instance:
     prefer-ip-address: true
 zuul:
   routes:
     microservice-springcloud-user: /user/**
     microservice-springcloud-movie-hystrix1: /movie1/**
-    movie: #±êÊ¶
+    movie: #ï¿½ï¿½Ê¶
       path: /movie/**
       serviceId: microservice-springcloud-movie-hystrix
-  ignored-services: microservice-springcloud-movie #¶à¸öÓÃ¶ººÅ·Ö¸ô
+  ignored-services: microservice-springcloud-movie #ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½Å·Ö¸ï¿½
