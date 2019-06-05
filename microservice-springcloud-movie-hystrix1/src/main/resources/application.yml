@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: microservice-springcloud-movie-hystrix1
+  zipkin:
+    base-url: http://localhost:9411
 eureka:
   client:
     service-url:
@@ -12,7 +14,7 @@ eureka:
     instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
 logging:
   level:
-    com.tommy.cloud.microservicespringcloudmovie.feign.UserFeignClient: debug  #Ö»ÏìÓ¦debug¼¶±ð
+    com.tommy.cloud.microservicespringcloudmovie.feign.UserFeignClient: debug  #Ö»ï¿½ï¿½Ó¦debugï¿½ï¿½ï¿½ï¿½
 feign:
   hystrix:
     enabled: true
